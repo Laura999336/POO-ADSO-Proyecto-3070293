@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuloSweet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Parisienne&family=Passions+Conflict&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/comandos.js"></script>
+  </head>
+  <body> 
+  
+   <header>
+     <div class="row" id="banner"> 
+       <div class="col-sm-5 p-10" >
+         <img src="img/logo/logo_page.png" alt="LOGO" height="70" class="img-left">
+       </div>
+       <div class="col-sm-7 p-10" >
+         <h1 style="font-family:'cookie'; color:black" class="text-center"  > LuloSweet </h1>
+        </div>   
+     </div>
+    </header>    
+     
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+         <img src="img/carrusell/lulo2.png" alt="Lulo Fresco" style="width:100%;"  >
+        </div>
+        <div class="item">
+          <img src="img/carrusell/producto.png" alt="producto" style="width:100%;" >
+        </div>
+        <div class="item">
+          <img src="img/carrusell/lulo.png" alt="cultivo" style="width:100%;" >
+        </div>
+        <div class="item">
+          <img src="img/carrusell/promo1.png" alt="promo1" style="width:100%;" >
+        </div>
+        <div class="item">
+          <img src="img/carrusell/promo2.png" alt="promo2" style="width:100%;" >
+        </div>
+      </div>
+        
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+       </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <br></br>    
+    <div class="container-fluid d-flex flex-column" style="min-height: 100vh;">
+      <div class="btn-group btn-group-justified">
+       <a href="#" class="btn btn-success"><button onclick="catalogo()" id="btn1"><img src="img/logo/catalogo.png" alt="Catalogo"></button></a>
+       <a href="#" class="btn btn-success"><button onclick="carrito()" id="btn2"><img src="img/logo/carrito.png" alt="Carrito"></button></a>
+       <a href="#" class="btn btn-success"><button onclick="cuenta()" id="btn3"><img src="img/logo/cuenta.png" alt="Cuenta"></button></a>
+       <a href="#" class="btn btn-success"><button onclick="soporte()" id="btn4"><img src="img/logo/Soporte.png" alt="Ayuda"></button></a>
+     </div>    
+     <br></br> 
+
+     <div class="container" id="contenido">
+       <div class="col-md-12" id ="banner">
+         <button onclick="inicio()" id="home" ><img src="img/logo/home.png"></button>
+         <h1 style="font-family:'cookie'; color:black" class="text-center"> Carrito de compra </h1>
+        </div>
+
+        <div class="col-md-12;">
+         <h3 style="font-family:'cookie'; color:black" class="text-center"> Resumen del pedido </h3>
+        </div>
+        
+        <div class="container-fluid" id="banner">
+         <div class="d-flex align-items-center justify-content-center" >
+           <br></br>
+           <div class ="row">
+             <div class="col-sm-7" >
+               <img src="img/productos/malteada.png" id="p1"> 
+               <p style="font-family:'Oswald'; color:black" class="float-end text-left" id="t1" >Malteada de lulo</p>
+               <p style="font-family:'Oswald'; color:rgb(102, 94, 94)" class="float-end text-left" id="t1" >Mediano(300ml)</p>              
+             </div>
+             <div class="col-sm-5 ">
+               <div class="input-group pull-right">
+                 <label for="Input" class="form-label">Cantidad:</label>
+                 <button class="btn-qty btn-circle" data-quantity="minus">-</button>
+                 <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="100" step="1">
+                 <button class="btn-qty btn-circle" data-quantity="plus">+</button>
+                </div>
+               <br></br>
+               <button type="button" id="editar1" class="btn pull-right" ><img src="img/logo/lapiz.png" class="img-center" height="20"></button>
+               <button type="button" id ="eliminar1" class="btn pull-right"><img src="img/logo/cerrar.png" class="img-center" height="20"></button>
+              </div>
+           </div>
+          </div>  
+       </div> 
+       <br></br>
+       <div class="container-fluid" id="banner">
+         <div class="d-flex align-items-center justify-content-center" >
+           <br></br>
+           <div class ="row">
+             <div class="col-md-7">
+               <img src="img/productos/combo.png" id="p2"> 
+               <p style="font-family:'Oswald'; color:black" id="t2" class="float-end text-left">Combo producto del día</p>
+               <p style="font-family:'Oswald'; color:rgb(102, 94, 94)" id="t2" class="float-end text-left">Tinto + Postre</p> 
+             </div>
+             <div class="col-md-5">
+               <div class="input-group pull-right">
+                 <label for="Input" class="form-label">Cantidad:</label>
+                 <button class="btn-qty btn-circle" data-quantity="minus">-</button>
+                 <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="100" step="1">
+                 <button class="btn-qty btn-circle" data-quantity="plus">+</button>
+                </div> 
+                <br></br>         
+               <button type="button" id="editar2" class="btn pull-right"><img src="img/logo/lapiz.png" class="img-center" height="20"></button>
+               <button type="button" id="eliminar2" class="btn pull-right"><img src="img/logo/cerrar.png" class="img-center" height="20"></button>
+              </div>
+            </div>  
+          </div>
+       </div>
+     </div>
+    
+     <br></br>
+    
+    <div class="container-fluid d-flex flex-column" style="min-height: 100vh;">
+      <div class="btn-group btn-group-justified">
+           <a href="#" class="btn btn-light" ><button type ="button" id="domicilio"><img src="img/logo/moto.png" height="100"></button></a>
+           <a href="#" class="btn btn-light" ><button type ="button"id="tienda"><img src="img/logo/tienda.png" height="100"></button></a>
+         </div>
+         
+         <div class="row" >
+           <div class="col-md-6" id="seccion-domicilio">
+             <div class="panel panel-default" id ="banner">
+               <div class="panel-body">
+                 <button type="button" class="btn pull-left" id ="home"><img src="img/logo/home.png"></button>
+                 <h4 style="font-family:'Oswald'; color:black" class="text-center">Ingrese dirección</h4>
+                </div>
+              </div>
+              <div class="container-fluid d-flex flex-column" style="min-height: 100vh;">
+                <div class="col-sm-4">
+                 <label for="ciudad">Ciudad</label>
+                 <input list="lista-ciudad" id="ciudad" name="ciudad">
+                 <datalist id="lista-ciudad">
+                 <option value="Bogotá"></option>
+                 <option value="Cali"></option>
+                 <option value="Medellín"></option></datalist>
+                 <br></br>
+                </div>
+                <div class="col-sm-4">
+                  <label for="Direccion">Vía</label>
+                  <input list="lista-via" id="dirección" name="Vía">
+                  <datalist id="lista-via">
+                  <option value="Calle"></option>
+                  <option value="Carrera"></option>
+                  <option value="Transversal"></option>
+                  <option value="Avenida Calle"></option>
+                  <option value="Avenida Carrera"></option></datalist>
+                  <br></br>
+                </div>
+                <div class="col-sm-2">
+                 <label for="Input" class="form-label">Número:</label>
+                 <input type="text" class="form-control" id="Input">
+                </div>
+                <div class="col-sm-2">
+                 <label for="Input" class="form-label">Letra:</label>
+                 <input type="text" class="form-control" id="Input">
+                </div>
+                <div class="col-sm-2">
+                 <label for="Input" class="form-label"># Número;</label>
+                 <input type="text" class="form-control" id="Input">
+               </div>
+
+               <div class="col-sm-2">
+                 <label for="Input" class="form-label">Complemento:</label>
+                 <input type="text" class="form-control" id="Input">
+                </div>
+                <div class="col-sm-12">
+                 <label for="Input" class="form-label">Detalles de dirección:</label>
+                 <input type="text" class="form-control" id="Input">
+                 <br> </br>
+                 <button type="button" class="btn pull-right" id= "abrir" data-bs-toggle="modal" data-bs-target="#myModal">Continuar</button>
+                </div>
+                <div class="mt-4">
+                 <p class="fw-bold">Vista previa:</p>
+                 <p id="direccionPreview" class="text-primary fs-5">---</p>
+               </div>
+              </div>
+            </div>
+        
+        <div class="col-md-6" id="seccion-tienda">
+          <div class="panel panel-default" style="background-color: rgb(211, 250, 137)">
+            <div class="panel-body">
+              <button class="btn pull-left"><img src="img/logo/home.png" class="img-center" height="20"></button>
+              <h4 style="font-family:'Oswald'; color:black" class="text-center">Seleccione tienda</h4>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="panel panel-default" style="background-color: rgb(226, 238, 203)">
+              <div class="panel-body">
+                <button class="btn pull-left"><img src="img/logo/tienda.png" class="img-center" height="80"></button>
+                <h4 class="text-center" style="font-family:'Oswald'; color:black">SEDE NORTE</h4>
+                <h5 class="text-center" style="font-family:'Oswald'; color:gray">Direccion</h5>
+                <br></br>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="panel panel-default" style="background-color: rgb(226, 238, 203)">
+              <div class="panel-body">
+                <button class="btn pull-left"><img src="img/logo/tienda.png" class="img-center" height="80"></button>
+                <h4 class="text-center" style="font-family:'Oswald'; color:black">SEDE SUR</h4>
+                <h5 class="text-center" style="font-family:'Oswald'; color:gray">Direccion</h5>
+                <br></br>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="panel panel-default" style="background-color: rgb(226, 238, 203)">
+              <div class="panel-body">
+                <button class="btn pull-left"><img src="img/logo/tienda.png" class="img-center" height="80"></button>
+                <h4 class="text-center" style="font-family:'Oswald'; color:black">SEDE OCCIDENTE</h4>
+                <h5 class="text-center" style="font-family:'Oswald'; color:gray">Direccion</h5>
+                <br></br>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn pull-right" id= "abrir" data-bs-toggle="modal" data-bs-target="#myModal">Continuar</button>
+       </div>
+      </div>
+
+      <div class="mt-4">
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content" id="inicio">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  <h2 class="modal-title" style="font-family:'cookie';">Inicio de sesión</h2>
+                  
+                </div>
+                <div class="modal-body">
+                  <form class="form-horizontal" method="post" action="LogginServlet">
+                   <div class="input-group">
+                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                     <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+                   </div>
+                   <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                  </div>
+                   <a href="registronuevo.html" class="btn btn-light text-center" id="crearUsuario" style="font-family:'Oswald'; color:black; text-decoration: underline">Crear usuario</a>
+                   <a href="#" class="btn btn-light text-center" style="font-family:'Oswald'; color:black; text-decoration: underline">Recordar mi contraseña</a>
+                  
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox">
+                        <label><input type="checkbox"> Recordarme</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                     <button type="submit" class="btn btn-P">Iniciar sesión</button>
+                    </div>
+                  </div>
+                </form>
+              </div>             
+            </div>
+          </div>      
+        </div>
+      </div>  
+  </body>
+</html>
